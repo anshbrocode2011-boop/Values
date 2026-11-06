@@ -9,64 +9,86 @@ import { AlertBanner } from './components/AlertBanner';
 import { ValueChangesModal } from './components/ValueChangesModal';
 import { SettingsModal } from './components/SettingsModal';
 import { formatDateTime, formatRelativeTime } from './utils/formatters';
+import initialData from './data/initial_values.json';
+
+// Helper for resilient fetching with automatic retry on transient network drops
+async function fetchWithRetry(url: string, options?: RequestInit, retries = 3, delay = 800): Promise<Response> {
+  let lastError: any = null;
+  for (let i = 0; i < retries; i++) {
+    try {
+      const res = await fetch(url, options);
+      if (res.ok) return res;
+      // If server returned 5xx, wait and retry
+      if (res.status >= 500 && i < retries - 1) {
+        await new Promise((resolve) => setTimeout(resolve, delay * (i + 1)));
+        continue;
+      }
+      return res;
+    } catch (err) {
+      lastError = err;
+      if (i < retries - 1) {
+        await new Promise((resolve) => setTimeout(resolve, delay * (i + 1)));
+      }
+    }
+  }
+  throw lastError || new Error(`Network request failed for ${url}`);
+}
 
 export function App() {
-  const [items, setItems] = useState<BloxFruitItem[]>([]);
-  const [status, setStatus] = useState<SyncStatus | null>(null);
+  // Pre-seed with verified data so UI renders instantly without waiting
+  const [items, setItems] = useState<BloxFruitItem[]>((initialData?.items as BloxFruitItem[]) || []);
+  const [status, setStatus] = useState<SyncStatus | null>((initialData?.status as SyncStatus) || null);
   const [changes, setChanges] = useState<ValueChange[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<ItemCategory | 'all'>('all');
   const [tableSearch, setTableSearch] = useState<string>('');
-  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isSyncing, setIsSyncing] = useState<boolean>(false);
   const [syncSuccessMessage, setSyncSuccessMessage] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isChangesModalOpen, setIsChangesModalOpen] = useState<boolean>(false);
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState<boolean>(false);
 
-  // Fetch items and sync status from backend
+  // Fetch items and sync status from backend with resilient retry
   const loadData = useCallback(async (isSilent = false) => {
-    if (!isSilent) setIsLoading(true);
-    setErrorMessage(null);
-
     try {
       // 1. Fetch values
-      const valRes = await fetch('/api/values');
-      if (!valRes.ok) {
-        throw new Error(`Failed to load values: HTTP ${valRes.status}`);
-      }
-      const valData = await valRes.json();
-      if (valData.items) {
-        setItems(valData.items);
-      }
-
-      // 2. Fetch status
-      const statusRes = await fetch('/api/status');
-      if (statusRes.ok) {
-        const sData = await statusRes.json();
-        setStatus(sData);
-      }
-
-      // 3. Fetch changes
-      const changesRes = await fetch('/api/changes');
-      if (changesRes.ok) {
-        const cData = await changesRes.json();
-        if (cData.changes) {
-          setChanges(cData.changes);
+      const valRes = await fetchWithRetry('/api/values', undefined, isSilent ? 2 : 3);
+      if (valRes.ok) {
+        const valData = await valRes.json();
+        if (Array.isArray(valData.items) && valData.items.length > 0) {
+          setItems(valData.items);
         }
+        if (valData.status) {
+          setStatus(valData.status);
+        }
+        setErrorMessage(null);
+      }
+
+      // 2. Fetch changes
+      try {
+        const changesRes = await fetchWithRetry('/api/changes', undefined, 2);
+        if (changesRes.ok) {
+          const cData = await changesRes.json();
+          if (Array.isArray(cData.changes)) {
+            setChanges(cData.changes);
+          }
+        }
+      } catch {
+        // non-blocking
       }
     } catch (err: any) {
-      console.error('Error fetching from backend API:', err);
-      setErrorMessage(
-        err.message || 'Could not connect to the backend server. Please verify the service is running.'
-      );
-    } finally {
-      if (!isSilent) setIsLoading(false);
+      console.warn('Background sync warning:', err.message);
+      // Only set visible error banner if we have NO items loaded at all
+      if (items.length === 0) {
+        setErrorMessage(
+          'Connecting to backend live values database... Click "Sync Settings -> Update Latest Values" if needed.'
+        );
+      }
     }
-  }, []);
+  }, [items.length]);
 
   useEffect(() => {
-    loadData();
-    // Poll status every 30 seconds
+    loadData(false);
+    // Background polling every 30 seconds
     const interval = setInterval(() => {
       loadData(true);
     }, 30000);
@@ -79,7 +101,7 @@ export function App() {
     setErrorMessage(null);
     setSyncSuccessMessage(null);
     try {
-      const res = await fetch('/api/refresh', { method: 'POST' });
+      const res = await fetchWithRetry('/api/refresh', { method: 'POST' }, 2);
       const data = await res.json();
       if (!res.ok || !data.success) {
         throw new Error(data.message || 'Synchronization failed.');

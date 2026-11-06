@@ -1,4 +1,4 @@
-import express, { Request, Response } from 'express';
+import express, { Request, Response, NextFunction } from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { db } from './src/server/db';
@@ -8,7 +8,19 @@ const __dirname = path.dirname(__filename);
 
 async function startServer() {
   const app = express();
-  const PORT = process.env.PORT || 3000;
+  // AI Studio requires dev server to run on port 3000
+  const PORT = 3000;
+
+  // CORS Middleware for iframe proxy and browser requests
+  app.use((req: Request, res: Response, next: NextFunction) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+    if (req.method === 'OPTIONS') {
+      return res.sendStatus(200);
+    }
+    next();
+  });
 
   app.use(express.json());
 
@@ -131,7 +143,13 @@ async function startServer() {
     });
   }
 
-  app.listen(Number(PORT), '0.0.0.0', () => {
+  // Global error handler
+  app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
+    console.error('[Server Error]:', err);
+    res.status(500).json({ success: false, error: err.message || 'Internal Server Error' });
+  });
+
+  app.listen(PORT, '0.0.0.0', () => {
     console.log(`[Server] Blox Fruits Values Server listening on http://0.0.0.0:${PORT}`);
   });
 }
