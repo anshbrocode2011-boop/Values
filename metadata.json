@@ -1,0 +1,6 @@
+{
+  "name": "Blox Fruits Values Report & PDF Generator",
+  "description": "Live Blox Fruits trading values database and one-click PDF report generator for regular, permanent, gamepass, and limited items.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
