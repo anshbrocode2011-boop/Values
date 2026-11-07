@@ -6,16 +6,17 @@
       "name": "West Dragon",
       "category": "Fruits",
       "rarity": "Mythical",
-      "image": "https://i.postimg.cc/7LfBxxs8/West-Dragon.png",
+      "image": "/images/1.webp",
       "images": [
-        "https://i.postimg.cc/7LfBxxs8/West-Dragon.png",
+        "/images/1.webp",
+        "/api/bloxfruits/item-image/1",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/1"
       ],
       "physicalValue": 2700000000,
       "physicalValueFormatted": "2.7B",
       "permanentValue": 4920000000,
       "permanentValueFormatted": "4.9B",
-      "physicalDemand": 9,
+      "physicalDemand": 8,
       "permanentDemand": 9,
       "physicalTrend": "Stable",
       "permanentTrend": "Overpaid",
@@ -32,11 +33,11 @@
         "x": "0",
         "z": "0"
       },
-      "updatedAt": "2026-11-02T20:54:35.000Z",
+      "updatedAt": "2026-11-06T14:24:03.000Z",
       "position": 0,
       "previousPhysicalValue": 2700000000,
       "previousPermanentValue": 4920000000,
-      "previousDemand": 9,
+      "previousDemand": 8,
       "previousTrend": "Stable"
     },
     {
@@ -45,16 +46,17 @@
       "name": "East Dragon",
       "category": "Fruits",
       "rarity": "Mythical",
-      "image": "https://i.postimg.cc/gkzHzzjS/East-Dragon.png",
+      "image": "/images/2.webp",
       "images": [
-        "https://i.postimg.cc/gkzHzzjS/East-Dragon.png",
+        "/images/2.webp",
+        "/api/bloxfruits/item-image/2",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/2"
       ],
       "physicalValue": 2250000000,
       "physicalValueFormatted": "2.3B",
       "permanentValue": 4920000000,
       "permanentValueFormatted": "4.9B",
-      "physicalDemand": 9,
+      "physicalDemand": 8,
       "permanentDemand": 9,
       "physicalTrend": "Stable",
       "permanentTrend": "Overpaid",
@@ -71,11 +73,11 @@
         "x": "0",
         "z": "0"
       },
-      "updatedAt": "2026-11-02T20:54:43.000Z",
+      "updatedAt": "2026-11-06T14:24:05.000Z",
       "position": 0,
       "previousPhysicalValue": 2250000000,
       "previousPermanentValue": 4920000000,
-      "previousDemand": 9,
+      "previousDemand": 8,
       "previousTrend": "Stable"
     },
     {
@@ -84,9 +86,10 @@
       "name": "Kitsune",
       "category": "Fruits",
       "rarity": "Mythical",
-      "image": "https://i.postimg.cc/CLxbycr9/Kitsune.png",
+      "image": "/images/3.webp",
       "images": [
-        "https://i.postimg.cc/CLxbycr9/Kitsune.png",
+        "/images/3.webp",
+        "/api/bloxfruits/item-image/3",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/3"
       ],
       "physicalValue": 450000000,
@@ -123,9 +126,10 @@
       "name": "Control",
       "category": "Fruits",
       "rarity": "Mythical",
-      "image": "https://i.postimg.cc/9QNpg6Wx/Control.png",
+      "image": "/images/12.webp",
       "images": [
-        "https://i.postimg.cc/9QNpg6Wx/Control.png",
+        "/images/12.webp",
+        "/api/bloxfruits/item-image/12",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/12"
       ],
       "physicalValue": 90000000,
@@ -162,13 +166,14 @@
       "name": "Magnet",
       "category": "Fruits",
       "rarity": "Mythical",
-      "image": "https://i.postimg.cc/2S7qNH21/latest-cb-20260905110645.webp",
+      "image": "/images/87.webp",
       "images": [
-        "https://i.postimg.cc/2S7qNH21/latest-cb-20260905110645.webp",
+        "/images/87.webp",
+        "/api/bloxfruits/item-image/87",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/87"
       ],
-      "physicalValue": 360000000,
-      "physicalValueFormatted": "360M",
+      "physicalValue": 330000000,
+      "physicalValueFormatted": "330M",
       "permanentValue": 3390000000,
       "permanentValueFormatted": "3.4B",
       "physicalDemand": 7,
@@ -188,9 +193,9 @@
         "x": "0",
         "z": "0"
       },
-      "updatedAt": "2026-11-04T20:51:43.000Z",
+      "updatedAt": "2026-11-06T14:20:23.000Z",
       "position": 0,
-      "previousPhysicalValue": 360000000,
+      "previousPhysicalValue": 330000000,
       "previousPermanentValue": 3390000000,
       "previousDemand": 7,
       "previousTrend": "Stable"
@@ -201,9 +206,10 @@
       "name": "Yeti",
       "category": "Fruits",
       "rarity": "Mythical",
-      "image": "https://i.postimg.cc/mrJmk0Jc/Yeti.png",
+      "image": "/images/4.webp",
       "images": [
-        "https://i.postimg.cc/mrJmk0Jc/Yeti.png",
+        "/images/4.webp",
+        "/api/bloxfruits/item-image/4",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/4"
       ],
       "physicalValue": 70000000,
@@ -240,9 +246,10 @@
       "name": "Gas",
       "category": "Fruits",
       "rarity": "Mythical",
-      "image": "https://i.postimg.cc/XNCpc4fS/1000-cb-20241223162315.webp",
+      "image": "/images/5.webp",
       "images": [
-        "https://i.postimg.cc/XNCpc4fS/1000-cb-20241223162315.webp",
+        "/images/5.webp",
+        "/api/bloxfruits/item-image/5",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/5"
       ],
       "physicalValue": 60000000,
@@ -279,9 +286,10 @@
       "name": "Tiger",
       "category": "Fruits",
       "rarity": "Mythical",
-      "image": "https://i.postimg.cc/vBDS3KNp/download.png",
+      "image": "/images/6.webp",
       "images": [
-        "https://i.postimg.cc/vBDS3KNp/download.png",
+        "/images/6.webp",
+        "/api/bloxfruits/item-image/6",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/6"
       ],
       "physicalValue": 80000000,
@@ -318,9 +326,10 @@
       "name": "Lightning",
       "category": "Fruits",
       "rarity": "Legendary",
-      "image": "https://i.postimg.cc/MHTHLFZD/Rumble.png",
+      "image": "/images/15.webp",
       "images": [
-        "https://i.postimg.cc/MHTHLFZD/Rumble.png",
+        "/images/15.webp",
+        "/api/bloxfruits/item-image/15",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/15"
       ],
       "physicalValue": 20000000,
@@ -357,13 +366,14 @@
       "name": "Venom",
       "category": "Fruits",
       "rarity": "Mythical",
-      "image": "https://i.postimg.cc/zGdtZLkF/Venom.png",
+      "image": "/images/13.webp",
       "images": [
-        "https://i.postimg.cc/zGdtZLkF/Venom.png",
+        "/images/13.webp",
+        "/api/bloxfruits/item-image/13",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/13"
       ],
-      "physicalValue": 100000000,
-      "physicalValueFormatted": "100M",
+      "physicalValue": 110000000,
+      "physicalValueFormatted": "110M",
       "permanentValue": null,
       "permanentValueFormatted": "N/A",
       "physicalDemand": 10,
@@ -383,9 +393,9 @@
         "x": "0",
         "z": "0"
       },
-      "updatedAt": "2026-11-04T20:51:49.000Z",
+      "updatedAt": "2026-11-06T14:20:27.000Z",
       "position": 0,
-      "previousPhysicalValue": 100000000,
+      "previousPhysicalValue": 110000000,
       "previousPermanentValue": null,
       "previousDemand": 10,
       "previousTrend": "Fluctuating"
@@ -396,9 +406,10 @@
       "name": "Dough",
       "category": "Fruits",
       "rarity": "Mythical",
-      "image": "https://i.postimg.cc/wxckYyqR/Dough.png",
+      "image": "/images/7.webp",
       "images": [
-        "https://i.postimg.cc/wxckYyqR/Dough.png",
+        "/images/7.webp",
+        "/api/bloxfruits/item-image/7",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/7"
       ],
       "physicalValue": 30000000,
@@ -435,9 +446,10 @@
       "name": "Pain",
       "category": "Fruits",
       "rarity": "Legendary",
-      "image": "https://i.postimg.cc/mk21srj7/Pain.png",
+      "image": "/images/16.webp",
       "images": [
-        "https://i.postimg.cc/mk21srj7/Pain.png",
+        "/images/16.webp",
+        "/api/bloxfruits/item-image/16",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/16"
       ],
       "physicalValue": 10000000,
@@ -474,9 +486,10 @@
       "name": "T-Rex",
       "category": "Fruits",
       "rarity": "Mythical",
-      "image": "https://i.postimg.cc/zGDtcwTf/T-Rex.png",
+      "image": "/images/8.webp",
       "images": [
-        "https://i.postimg.cc/zGDtcwTf/T-Rex.png",
+        "/images/8.webp",
+        "/api/bloxfruits/item-image/8",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/8"
       ],
       "physicalValue": 20000000,
@@ -513,9 +526,10 @@
       "name": "Gravity",
       "category": "Fruits",
       "rarity": "Mythical",
-      "image": "https://i.postimg.cc/D02Lw6vJ/Gravity.png",
+      "image": "/images/9.webp",
       "images": [
-        "https://i.postimg.cc/D02Lw6vJ/Gravity.png",
+        "/images/9.webp",
+        "/api/bloxfruits/item-image/9",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/9"
       ],
       "physicalValue": 10000000,
@@ -552,9 +566,10 @@
       "name": "Mammoth",
       "category": "Fruits",
       "rarity": "Mythical",
-      "image": "https://i.postimg.cc/sXJGqWYV/Mammoth.png",
+      "image": "/images/10.webp",
       "images": [
-        "https://i.postimg.cc/sXJGqWYV/Mammoth.png",
+        "/images/10.webp",
+        "/api/bloxfruits/item-image/10",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/10"
       ],
       "physicalValue": 10000000,
@@ -591,9 +606,10 @@
       "name": "Spirit",
       "category": "Fruits",
       "rarity": "Mythical",
-      "image": "https://i.postimg.cc/wTpbhYvL/Spirit.png",
+      "image": "/images/11.webp",
       "images": [
-        "https://i.postimg.cc/wTpbhYvL/Spirit.png",
+        "/images/11.webp",
+        "/api/bloxfruits/item-image/11",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/11"
       ],
       "physicalValue": 10000000,
@@ -630,9 +646,10 @@
       "name": "Shadow",
       "category": "Fruits",
       "rarity": "Mythical",
-      "image": "https://i.postimg.cc/kGpGPvBd/Shadow.png",
+      "image": "/images/14.webp",
       "images": [
-        "https://i.postimg.cc/kGpGPvBd/Shadow.png",
+        "/images/14.webp",
+        "/api/bloxfruits/item-image/14",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/14"
       ],
       "physicalValue": 6500000,
@@ -669,9 +686,10 @@
       "name": "Portal",
       "category": "Fruits",
       "rarity": "Legendary",
-      "image": "https://i.postimg.cc/DzkWz65v/Portal.png",
+      "image": "/images/17.webp",
       "images": [
-        "https://i.postimg.cc/DzkWz65v/Portal.png",
+        "/images/17.webp",
+        "/api/bloxfruits/item-image/17",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/17"
       ],
       "physicalValue": 10000000,
@@ -708,9 +726,10 @@
       "name": "Buddha",
       "category": "Fruits",
       "rarity": "Legendary",
-      "image": "https://i.postimg.cc/02nZD6h1/Buddha.png",
+      "image": "/images/18.webp",
       "images": [
-        "https://i.postimg.cc/02nZD6h1/Buddha.png",
+        "/images/18.webp",
+        "/api/bloxfruits/item-image/18",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/18"
       ],
       "physicalValue": 10000000,
@@ -747,9 +766,10 @@
       "name": "Blizzard",
       "category": "Fruits",
       "rarity": "Legendary",
-      "image": "https://i.postimg.cc/fTDBV72v/Blizzard.png",
+      "image": "/images/19.webp",
       "images": [
-        "https://i.postimg.cc/fTDBV72v/Blizzard.png",
+        "/images/19.webp",
+        "/api/bloxfruits/item-image/19",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/19"
       ],
       "physicalValue": 5000000,
@@ -786,9 +806,10 @@
       "name": "Creation",
       "category": "Fruits",
       "rarity": "Legendary",
-      "image": "https://i.postimg.cc/HLctq6nT/Creation.png",
+      "image": "/images/20.webp",
       "images": [
-        "https://i.postimg.cc/HLctq6nT/Creation.png",
+        "/images/20.webp",
+        "/api/bloxfruits/item-image/20",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/20"
       ],
       "physicalValue": 2500000,
@@ -825,9 +846,10 @@
       "name": "Phoenix",
       "category": "Fruits",
       "rarity": "Legendary",
-      "image": "https://i.postimg.cc/DwbJFHrp/Phoenix.png",
+      "image": "/images/21.webp",
       "images": [
-        "https://i.postimg.cc/DwbJFHrp/Phoenix.png",
+        "/images/21.webp",
+        "/api/bloxfruits/item-image/21",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/21"
       ],
       "physicalValue": 2750000,
@@ -864,9 +886,10 @@
       "name": "Sound",
       "category": "Fruits",
       "rarity": "Legendary",
-      "image": "https://i.postimg.cc/MKgHs5C7/Sound.png",
+      "image": "/images/22.webp",
       "images": [
-        "https://i.postimg.cc/MKgHs5C7/Sound.png",
+        "/images/22.webp",
+        "/api/bloxfruits/item-image/22",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/22"
       ],
       "physicalValue": 2500000,
@@ -903,9 +926,10 @@
       "name": "Spider",
       "category": "Fruits",
       "rarity": "Legendary",
-      "image": "https://i.postimg.cc/MpRTgRwh/Spider.png",
+      "image": "/images/23.webp",
       "images": [
-        "https://i.postimg.cc/MpRTgRwh/Spider.png",
+        "/images/23.webp",
+        "/api/bloxfruits/item-image/23",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/23"
       ],
       "physicalValue": 1500000,
@@ -942,9 +966,10 @@
       "name": "Love",
       "category": "Fruits",
       "rarity": "Legendary",
-      "image": "https://i.postimg.cc/0NDwGFrK/Love.png",
+      "image": "/images/24.webp",
       "images": [
-        "https://i.postimg.cc/0NDwGFrK/Love.png",
+        "/images/24.webp",
+        "/api/bloxfruits/item-image/24",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/24"
       ],
       "physicalValue": 1500000,
@@ -981,9 +1006,10 @@
       "name": "Magma",
       "category": "Fruits",
       "rarity": "Rare",
-      "image": "https://i.postimg.cc/W3VJ58JW/Magma.png",
+      "image": "/images/26.webp",
       "images": [
-        "https://i.postimg.cc/W3VJ58JW/Magma.png",
+        "/images/26.webp",
+        "/api/bloxfruits/item-image/26",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/26"
       ],
       "physicalValue": 1150000,
@@ -1020,9 +1046,10 @@
       "name": "Quake",
       "category": "Fruits",
       "rarity": "Legendary",
-      "image": "https://i.postimg.cc/cJRvt35Q/Quake.png",
+      "image": "/images/25.webp",
       "images": [
-        "https://i.postimg.cc/cJRvt35Q/Quake.png",
+        "/images/25.webp",
+        "/api/bloxfruits/item-image/25",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/25"
       ],
       "physicalValue": 1000000,
@@ -1059,9 +1086,10 @@
       "name": "Diamond",
       "category": "Fruits",
       "rarity": "Uncommon",
-      "image": "https://i.postimg.cc/3N7CD7Bw/Diamond.png",
+      "image": "/images/30.webp",
       "images": [
-        "https://i.postimg.cc/3N7CD7Bw/Diamond.png",
+        "/images/30.webp",
+        "/api/bloxfruits/item-image/30",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/30"
       ],
       "physicalValue": 1000000,
@@ -1098,9 +1126,10 @@
       "name": "Light",
       "category": "Fruits",
       "rarity": "Rare",
-      "image": "https://i.postimg.cc/K8dTMxcy/Light.png",
+      "image": "/images/27.webp",
       "images": [
-        "https://i.postimg.cc/K8dTMxcy/Light.png",
+        "/images/27.webp",
+        "/api/bloxfruits/item-image/27",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/27"
       ],
       "physicalValue": 800000,
@@ -1137,9 +1166,10 @@
       "name": "Ghost",
       "category": "Fruits",
       "rarity": "Rare",
-      "image": "https://i.postimg.cc/k4PWk9Ly/Ghost.png",
+      "image": "/images/28.webp",
       "images": [
-        "https://i.postimg.cc/k4PWk9Ly/Ghost.png",
+        "/images/28.webp",
+        "/api/bloxfruits/item-image/28",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/28"
       ],
       "physicalValue": 800000,
@@ -1176,9 +1206,10 @@
       "name": "Eagle",
       "category": "Fruits",
       "rarity": "Uncommon",
-      "image": "https://i.postimg.cc/sxcPY864/Eagle.png",
+      "image": "/images/31.webp",
       "images": [
-        "https://i.postimg.cc/sxcPY864/Eagle.png",
+        "/images/31.webp",
+        "/api/bloxfruits/item-image/31",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/31"
       ],
       "physicalValue": 800000,
@@ -1215,9 +1246,10 @@
       "name": "Rubber",
       "category": "Fruits",
       "rarity": "Rare",
-      "image": "https://i.postimg.cc/qRQgjTrq/Rubber.png",
+      "image": "/images/29.webp",
       "images": [
-        "https://i.postimg.cc/qRQgjTrq/Rubber.png",
+        "/images/29.webp",
+        "/api/bloxfruits/item-image/29",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/29"
       ],
       "physicalValue": 700000,
@@ -1254,9 +1286,10 @@
       "name": "Ice",
       "category": "Fruits",
       "rarity": "Uncommon",
-      "image": "https://i.postimg.cc/zDjTPs7n/Ice.png",
+      "image": "/images/32.webp",
       "images": [
-        "https://i.postimg.cc/zDjTPs7n/Ice.png",
+        "/images/32.webp",
+        "/api/bloxfruits/item-image/32",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/32"
       ],
       "physicalValue": 550000,
@@ -1293,9 +1326,10 @@
       "name": "Sand",
       "category": "Fruits",
       "rarity": "Uncommon",
-      "image": "https://i.postimg.cc/QxFVkwyN/Sand.png",
+      "image": "/images/33.webp",
       "images": [
-        "https://i.postimg.cc/QxFVkwyN/Sand.png",
+        "/images/33.webp",
+        "/api/bloxfruits/item-image/33",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/33"
       ],
       "physicalValue": 420000,
@@ -1332,9 +1366,10 @@
       "name": "Dark",
       "category": "Fruits",
       "rarity": "Uncommon",
-      "image": "https://i.postimg.cc/0NTCP7KD/Dark.png",
+      "image": "/images/34.webp",
       "images": [
-        "https://i.postimg.cc/0NTCP7KD/Dark.png",
+        "/images/34.webp",
+        "/api/bloxfruits/item-image/34",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/34"
       ],
       "physicalValue": 400000,
@@ -1371,9 +1406,10 @@
       "name": "Flame",
       "category": "Fruits",
       "rarity": "Uncommon",
-      "image": "https://i.postimg.cc/y8WhRLF0/Flame.png",
+      "image": "/images/35.webp",
       "images": [
-        "https://i.postimg.cc/y8WhRLF0/Flame.png",
+        "/images/35.webp",
+        "/api/bloxfruits/item-image/35",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/35"
       ],
       "physicalValue": 250000,
@@ -1410,9 +1446,10 @@
       "name": "Spike",
       "category": "Fruits",
       "rarity": "Common",
-      "image": "https://i.postimg.cc/fbNLsLTk/Spike.png",
+      "image": "/images/36.webp",
       "images": [
-        "https://i.postimg.cc/fbNLsLTk/Spike.png",
+        "/images/36.webp",
+        "/api/bloxfruits/item-image/36",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/36"
       ],
       "physicalValue": 180000,
@@ -1449,9 +1486,10 @@
       "name": "Smoke",
       "category": "Fruits",
       "rarity": "Common",
-      "image": "https://i.postimg.cc/nVRCmpTw/Smoke.png",
+      "image": "/images/37.webp",
       "images": [
-        "https://i.postimg.cc/nVRCmpTw/Smoke.png",
+        "/images/37.webp",
+        "/api/bloxfruits/item-image/37",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/37"
       ],
       "physicalValue": 100000,
@@ -1488,9 +1526,10 @@
       "name": "Bomb",
       "category": "Fruits",
       "rarity": "Common",
-      "image": "https://i.postimg.cc/y8NjP1zg/Bomb.png",
+      "image": "/images/38.webp",
       "images": [
-        "https://i.postimg.cc/y8NjP1zg/Bomb.png",
+        "/images/38.webp",
+        "/api/bloxfruits/item-image/38",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/38"
       ],
       "physicalValue": 80000,
@@ -1527,9 +1566,10 @@
       "name": "Spring",
       "category": "Fruits",
       "rarity": "Common",
-      "image": "https://i.postimg.cc/15r7B7nT/Spring.png",
+      "image": "/images/39.webp",
       "images": [
-        "https://i.postimg.cc/15r7B7nT/Spring.png",
+        "/images/39.webp",
+        "/api/bloxfruits/item-image/39",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/39"
       ],
       "physicalValue": 60000,
@@ -1566,9 +1606,10 @@
       "name": "Blade",
       "category": "Fruits",
       "rarity": "Common",
-      "image": "https://i.postimg.cc/bYQmYVTJ/Blade.png",
+      "image": "/images/40.webp",
       "images": [
-        "https://i.postimg.cc/bYQmYVTJ/Blade.png",
+        "/images/40.webp",
+        "/api/bloxfruits/item-image/40",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/40"
       ],
       "physicalValue": 50000,
@@ -1605,9 +1646,10 @@
       "name": "Spin",
       "category": "Fruits",
       "rarity": "Common",
-      "image": "https://i.postimg.cc/jj4jSbLc/Spin.png",
+      "image": "/images/41.webp",
       "images": [
-        "https://i.postimg.cc/jj4jSbLc/Spin.png",
+        "/images/41.webp",
+        "/api/bloxfruits/item-image/41",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/41"
       ],
       "physicalValue": 7500,
@@ -1644,9 +1686,10 @@
       "name": "Rocket",
       "category": "Fruits",
       "rarity": "Common",
-      "image": "https://i.postimg.cc/cHdrRJVP/Rocket.png",
+      "image": "/images/42.webp",
       "images": [
-        "https://i.postimg.cc/cHdrRJVP/Rocket.png",
+        "/images/42.webp",
+        "/api/bloxfruits/item-image/42",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/42"
       ],
       "physicalValue": 5000,
@@ -1683,9 +1726,10 @@
       "name": "Fruit Notifier",
       "category": "Gamepasses",
       "rarity": "Gamepass",
-      "image": "https://i.postimg.cc/Zqdr70sR/Fruit-Notifer.png",
+      "image": "/images/47.webp",
       "images": [
-        "https://i.postimg.cc/Zqdr70sR/Fruit-Notifer.png",
+        "/images/47.webp",
+        "/api/bloxfruits/item-image/47",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/47"
       ],
       "physicalValue": 2540000000,
@@ -1715,9 +1759,10 @@
       "name": "Dark Blade",
       "category": "Gamepasses",
       "rarity": "Gamepass",
-      "image": "https://i.postimg.cc/fLYfLkYF/Dark-Blade.png",
+      "image": "/images/48.webp",
       "images": [
-        "https://i.postimg.cc/fLYfLkYF/Dark-Blade.png",
+        "/images/48.webp",
+        "/api/bloxfruits/item-image/48",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/48"
       ],
       "physicalValue": 750000000,
@@ -1747,9 +1792,10 @@
       "name": "Mythical Scrolls",
       "category": "Gamepasses",
       "rarity": "Gamepass",
-      "image": "https://i.postimg.cc/d3HktKNp/Mythical-Scrolls.png",
+      "image": "/images/49.webp",
       "images": [
-        "https://i.postimg.cc/d3HktKNp/Mythical-Scrolls.png",
+        "/images/49.webp",
+        "/api/bloxfruits/item-image/49",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/49"
       ],
       "physicalValue": 1080000000,
@@ -1779,9 +1825,10 @@
       "name": "Legendary Scrolls",
       "category": "Gamepasses",
       "rarity": "Gamepass",
-      "image": "https://i.postimg.cc/YqDYtQJ0/Legendary-Scrolls.png",
+      "image": "/images/50.webp",
       "images": [
-        "https://i.postimg.cc/YqDYtQJ0/Legendary-Scrolls.png",
+        "/images/50.webp",
+        "/api/bloxfruits/item-image/50",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/50"
       ],
       "physicalValue": 480000000,
@@ -1811,9 +1858,10 @@
       "name": "+1 Fruit Storage",
       "category": "Gamepasses",
       "rarity": "Gamepass",
-      "image": "https://i.postimg.cc/hj7pmcdF/1-Fruit-Storage.png",
+      "image": "/images/51.webp",
       "images": [
-        "https://i.postimg.cc/hj7pmcdF/1-Fruit-Storage.png",
+        "/images/51.webp",
+        "/api/bloxfruits/item-image/51",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/51"
       ],
       "physicalValue": 270000000,
@@ -1843,9 +1891,10 @@
       "name": "2x Mastery",
       "category": "Gamepasses",
       "rarity": "Gamepass",
-      "image": "https://i.postimg.cc/0jdntrQm/2x-Mastery.png",
+      "image": "/images/52.webp",
       "images": [
-        "https://i.postimg.cc/0jdntrQm/2x-Mastery.png",
+        "/images/52.webp",
+        "/api/bloxfruits/item-image/52",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/52"
       ],
       "physicalValue": 300000000,
@@ -1875,9 +1924,10 @@
       "name": "2x Money",
       "category": "Gamepasses",
       "rarity": "Gamepass",
-      "image": "https://i.postimg.cc/rsLgC58M/2x-Money.png",
+      "image": "/images/53.webp",
       "images": [
-        "https://i.postimg.cc/rsLgC58M/2x-Money.png",
+        "/images/53.webp",
+        "/api/bloxfruits/item-image/53",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/53"
       ],
       "physicalValue": 300000000,
@@ -1907,9 +1957,10 @@
       "name": "2x Boss Drops",
       "category": "Gamepasses",
       "rarity": "Gamepass",
-      "image": "https://i.postimg.cc/HxMBy616/2x-Boss-Drops.png",
+      "image": "/images/54.webp",
       "images": [
-        "https://i.postimg.cc/HxMBy616/2x-Boss-Drops.png",
+        "/images/54.webp",
+        "/api/bloxfruits/item-image/54",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/54"
       ],
       "physicalValue": 180000000,
@@ -1939,9 +1990,10 @@
       "name": "Fast Boats",
       "category": "Gamepasses",
       "rarity": "Gamepass",
-      "image": "https://i.postimg.cc/NjV6kR4S/Fast-Boats.png",
+      "image": "/images/55.webp",
       "images": [
-        "https://i.postimg.cc/NjV6kR4S/Fast-Boats.png",
+        "/images/55.webp",
+        "/api/bloxfruits/item-image/55",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/55"
       ],
       "physicalValue": 180000000,
@@ -1971,9 +2023,10 @@
       "name": "Permanent Dragon Token",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/59nFmw9g/Permanent-Dragon-Token.png",
+      "image": "/images/44.webp",
       "images": [
-        "https://i.postimg.cc/59nFmw9g/Permanent-Dragon-Token.png",
+        "/images/44.webp",
+        "/api/bloxfruits/item-image/44",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/44"
       ],
       "physicalValue": null,
@@ -2003,15 +2056,17 @@
       "name": "Hellfire Gas",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/RhvjdZB9/placeholder.png",
+      "image": "/images/95.webp",
       "images": [
-        "https://i.postimg.cc/RhvjdZB9/placeholder.png"
+        "/images/95.webp",
+        "/api/bloxfruits/item-image/95",
+        "https://bloxfruitsvalues.com/api/bloxfruits/item-image/95"
       ],
-      "physicalValue": 180000000,
-      "physicalValueFormatted": "180M",
+      "physicalValue": 120000000,
+      "physicalValueFormatted": "120M",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
-      "physicalDemand": 6,
+      "physicalDemand": 5,
       "permanentDemand": 0,
       "physicalTrend": "Unstable",
       "permanentTrend": "Stable",
@@ -2021,11 +2076,11 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-11-04T20:56:50.000Z",
+      "updatedAt": "2026-11-06T14:24:49.000Z",
       "position": 0,
-      "previousPhysicalValue": 180000000,
+      "previousPhysicalValue": 120000000,
       "previousPermanentValue": 0,
-      "previousDemand": 6,
+      "previousDemand": 5,
       "previousTrend": "Unstable"
     },
     {
@@ -2034,13 +2089,14 @@
       "name": "Doghouse (Frame Break)",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/gkCRMCfR/Doghouse-(Frame-Break).png",
+      "image": "/images/84.webp",
       "images": [
-        "https://i.postimg.cc/gkCRMCfR/Doghouse-(Frame-Break).png",
+        "/images/84.webp",
+        "/api/bloxfruits/item-image/84",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/84"
       ],
-      "physicalValue": 10890000000,
-      "physicalValueFormatted": "10.9B",
+      "physicalValue": 11040000000,
+      "physicalValueFormatted": "11B",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
       "physicalDemand": 8,
@@ -2053,9 +2109,9 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-11-04T20:52:13.000Z",
+      "updatedAt": "2026-11-06T14:20:55.000Z",
       "position": 0,
-      "previousPhysicalValue": 10890000000,
+      "previousPhysicalValue": 11040000000,
       "previousPermanentValue": 0,
       "previousDemand": 8,
       "previousTrend": "Unstable"
@@ -2066,13 +2122,14 @@
       "name": "Rabid Dog Blade",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/jdpN8pGf/Rabid-Dog-Blade.png",
+      "image": "/images/85.webp",
       "images": [
-        "https://i.postimg.cc/jdpN8pGf/Rabid-Dog-Blade.png",
+        "/images/85.webp",
+        "/api/bloxfruits/item-image/85",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/85"
       ],
-      "physicalValue": 20700000000,
-      "physicalValueFormatted": "20.7B",
+      "physicalValue": 21420000000,
+      "physicalValueFormatted": "21.4B",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
       "physicalDemand": 8,
@@ -2085,9 +2142,9 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-11-04T20:52:05.000Z",
+      "updatedAt": "2026-11-06T14:20:42.000Z",
       "position": 0,
-      "previousPhysicalValue": 20700000000,
+      "previousPhysicalValue": 21420000000,
       "previousPermanentValue": 0,
       "previousDemand": 8,
       "previousTrend": "Unstable"
@@ -2098,13 +2155,14 @@
       "name": "Dog Blade",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/L6cfycr1/Dog-Blade.png",
+      "image": "/images/86.webp",
       "images": [
-        "https://i.postimg.cc/L6cfycr1/Dog-Blade.png",
+        "/images/86.webp",
+        "/api/bloxfruits/item-image/86",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/86"
       ],
-      "physicalValue": 1740000000,
-      "physicalValueFormatted": "1.7B",
+      "physicalValue": 1800000000,
+      "physicalValueFormatted": "1.8B",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
       "physicalDemand": 10,
@@ -2117,9 +2175,9 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-11-04T20:54:34.000Z",
+      "updatedAt": "2026-11-06T14:22:34.000Z",
       "position": 0,
-      "previousPhysicalValue": 1740000000,
+      "previousPhysicalValue": 1800000000,
       "previousPermanentValue": 0,
       "previousDemand": 10,
       "previousTrend": "Overpaid"
@@ -2130,9 +2188,10 @@
       "name": "Fiend Yeti",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/fbBmGbCv/latest-cb-20260214132352.webp",
+      "image": "/images/83.webp",
       "images": [
-        "https://i.postimg.cc/fbBmGbCv/latest-cb-20260214132352.webp",
+        "/images/83.webp",
+        "/api/bloxfruits/item-image/83",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/83"
       ],
       "physicalValue": 930000000,
@@ -2162,13 +2221,14 @@
       "name": "Galaxy Empyrean Kitsune",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/k5JRY7vf/latest-cb-20251226164613.webp",
+      "image": "/images/79.webp",
       "images": [
-        "https://i.postimg.cc/k5JRY7vf/latest-cb-20251226164613.webp",
+        "/images/79.webp",
+        "/api/bloxfruits/item-image/79",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/79"
       ],
-      "physicalValue": 8190000000,
-      "physicalValueFormatted": "8.2B",
+      "physicalValue": 8460000000,
+      "physicalValueFormatted": "8.5B",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
       "physicalDemand": 10,
@@ -2181,9 +2241,9 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-11-04T20:52:37.000Z",
+      "updatedAt": "2026-11-06T14:21:04.000Z",
       "position": 0,
-      "previousPhysicalValue": 8190000000,
+      "previousPhysicalValue": 8460000000,
       "previousPermanentValue": 0,
       "previousDemand": 10,
       "previousTrend": "Overpaid"
@@ -2194,12 +2254,13 @@
       "name": "Ember West Dragon",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/Qtn7Wv59/latest-cb-20251226164628.webp",
+      "image": "/images/80.webp",
       "images": [
-        "https://i.postimg.cc/Qtn7Wv59/latest-cb-20251226164628.webp",
+        "/images/80.webp",
+        "/api/bloxfruits/item-image/80",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/80"
       ],
-      "physicalValue": 6030000000,
+      "physicalValue": 5970000000,
       "physicalValueFormatted": "6B",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
@@ -2213,9 +2274,9 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-11-04T20:53:16.000Z",
+      "updatedAt": "2026-11-06T14:21:53.000Z",
       "position": 0,
-      "previousPhysicalValue": 6030000000,
+      "previousPhysicalValue": 5970000000,
       "previousPermanentValue": 0,
       "previousDemand": 10,
       "previousTrend": "Overpaid"
@@ -2226,12 +2287,13 @@
       "name": "Crimson Kitsune",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/dtg9fZh5/latest-cb-20251225145618.webp",
+      "image": "/images/81.webp",
       "images": [
-        "https://i.postimg.cc/dtg9fZh5/latest-cb-20251225145618.webp",
+        "/images/81.webp",
+        "/api/bloxfruits/item-image/81",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/81"
       ],
-      "physicalValue": 6120000000,
+      "physicalValue": 6090000000,
       "physicalValueFormatted": "6.1B",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
@@ -2245,9 +2307,9 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-11-04T20:52:50.000Z",
+      "updatedAt": "2026-11-06T14:21:17.000Z",
       "position": 0,
-      "previousPhysicalValue": 6120000000,
+      "previousPhysicalValue": 6090000000,
       "previousPermanentValue": 0,
       "previousDemand": 7,
       "previousTrend": "Stable"
@@ -2258,9 +2320,10 @@
       "name": "Vibe (Frame Break)",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/Bb53Pz8P/1000-cb-20260907132311.webp",
+      "image": "/images/88.webp",
       "images": [
-        "https://i.postimg.cc/Bb53Pz8P/1000-cb-20260907132311.webp",
+        "/images/88.webp",
+        "/api/bloxfruits/item-image/88",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/88"
       ],
       "physicalValue": 8190000000,
@@ -2290,9 +2353,10 @@
       "name": "Arcsteel Magnet",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/6pf7xHYL/1000-cb-20260906113126.webp",
+      "image": "/images/89.webp",
       "images": [
-        "https://i.postimg.cc/6pf7xHYL/1000-cb-20260906113126.webp",
+        "/images/89.webp",
+        "/api/bloxfruits/item-image/89",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/89"
       ],
       "physicalValue": 1830000000,
@@ -2322,9 +2386,10 @@
       "name": "Runic Fiend",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/SxfXbZD6/latest-cb-20260907125448.webp",
+      "image": "/images/90.webp",
       "images": [
-        "https://i.postimg.cc/SxfXbZD6/latest-cb-20260907125448.webp",
+        "/images/90.webp",
+        "/api/bloxfruits/item-image/90",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/90"
       ],
       "physicalValue": 1380000000,
@@ -2354,9 +2419,10 @@
       "name": "Starlight Gravity",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/zGFLYd0T/latest-cb-20260907114408.webp",
+      "image": "/images/91.webp",
       "images": [
-        "https://i.postimg.cc/zGFLYd0T/latest-cb-20260907114408.webp",
+        "/images/91.webp",
+        "/api/bloxfruits/item-image/91",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/91"
       ],
       "physicalValue": 300000000,
@@ -2386,9 +2452,10 @@
       "name": "Scarlet Ghost",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/zGFLYd0K/latest-cb-20260907194223.webp",
+      "image": "/images/92.webp",
       "images": [
-        "https://i.postimg.cc/zGFLYd0K/latest-cb-20260907194223.webp",
+        "/images/92.webp",
+        "/api/bloxfruits/item-image/92",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/92"
       ],
       "physicalValue": 20000000,
@@ -2418,9 +2485,10 @@
       "name": "Lime Blade",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/PJbHv7LF/latest-cb-20260907132705.webp",
+      "image": "/images/93.webp",
       "images": [
-        "https://i.postimg.cc/PJbHv7LF/latest-cb-20260907132705.webp",
+        "/images/93.webp",
+        "/api/bloxfruits/item-image/93",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/93"
       ],
       "physicalValue": 10000000,
@@ -2450,12 +2518,14 @@
       "name": "Meme-Meme",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://bloxfruitsvalues.com/api/bloxfruits/item-image/59",
+      "image": "/images/59.webp",
       "images": [
+        "/images/59.webp",
+        "/api/bloxfruits/item-image/59",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/59"
       ],
-      "physicalValue": 5880000000,
-      "physicalValueFormatted": "5.9B",
+      "physicalValue": 5760000000,
+      "physicalValueFormatted": "5.8B",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
       "physicalDemand": 9,
@@ -2468,9 +2538,9 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-11-04T20:53:26.000Z",
+      "updatedAt": "2026-11-06T14:22:04.000Z",
       "position": 0,
-      "previousPhysicalValue": 5880000000,
+      "previousPhysicalValue": 5760000000,
       "previousPermanentValue": 0,
       "previousDemand": 9,
       "previousTrend": "Overpaid"
@@ -2481,9 +2551,10 @@
       "name": "Divine Portal",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/htF9sFwc/latest-cb-20251225222313.webp",
+      "image": "/images/82.webp",
       "images": [
-        "https://i.postimg.cc/htF9sFwc/latest-cb-20251225222313.webp",
+        "/images/82.webp",
+        "/api/bloxfruits/item-image/82",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/82"
       ],
       "physicalValue": 1890000000,
@@ -2513,12 +2584,13 @@
       "name": "Parrot",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/dt3ZNLLY/Parrot.png",
+      "image": "/images/43.webp",
       "images": [
-        "https://i.postimg.cc/dt3ZNLLY/Parrot.png",
+        "/images/43.webp",
+        "/api/bloxfruits/item-image/43",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/43"
       ],
-      "physicalValue": 6120000000,
+      "physicalValue": 6090000000,
       "physicalValueFormatted": "6.1B",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
@@ -2532,9 +2604,9 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-11-04T20:52:58.000Z",
+      "updatedAt": "2026-11-06T14:21:29.000Z",
       "position": 0,
-      "previousPhysicalValue": 6120000000,
+      "previousPhysicalValue": 6090000000,
       "previousPermanentValue": 0,
       "previousDemand": 4,
       "previousTrend": "Stable"
@@ -2545,13 +2617,14 @@
       "name": "Purple Lightning",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/d0FsYGYD/Purple-Lightning.png",
+      "image": "/images/56.webp",
       "images": [
-        "https://i.postimg.cc/d0FsYGYD/Purple-Lightning.png",
+        "/images/56.webp",
+        "/api/bloxfruits/item-image/56",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/56"
       ],
-      "physicalValue": 4320000000,
-      "physicalValueFormatted": "4.3B",
+      "physicalValue": 4500000000,
+      "physicalValueFormatted": "4.5B",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
       "physicalDemand": 8,
@@ -2564,9 +2637,9 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-11-04T20:53:35.000Z",
+      "updatedAt": "2026-11-06T14:22:22.000Z",
       "position": 0,
-      "previousPhysicalValue": 4320000000,
+      "previousPhysicalValue": 4500000000,
       "previousPermanentValue": 0,
       "previousDemand": 8,
       "previousTrend": "Stable"
@@ -2577,9 +2650,10 @@
       "name": "Red Lightning",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/s2DmjTkH/Red-Lightning.png",
+      "image": "/images/75.webp",
       "images": [
-        "https://i.postimg.cc/s2DmjTkH/Red-Lightning.png",
+        "/images/75.webp",
+        "/api/bloxfruits/item-image/75",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/75"
       ],
       "physicalValue": 1800000000,
@@ -2609,9 +2683,10 @@
       "name": "Yellow Lightning",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/cLwx2XPV/Yellow-Lightning.png",
+      "image": "/images/57.webp",
       "images": [
-        "https://i.postimg.cc/cLwx2XPV/Yellow-Lightning.png",
+        "/images/57.webp",
+        "/api/bloxfruits/item-image/57",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/57"
       ],
       "physicalValue": 120000000,
@@ -2641,9 +2716,10 @@
       "name": "Green Lightning",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/MKcKbW5Z/Green-Lightning.png",
+      "image": "/images/58.webp",
       "images": [
-        "https://i.postimg.cc/MKcKbW5Z/Green-Lightning.png",
+        "/images/58.webp",
+        "/api/bloxfruits/item-image/58",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/58"
       ],
       "physicalValue": 180000000,
@@ -2673,9 +2749,10 @@
       "name": "Werewolf",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/mr2jLmv5/Werewolf.png",
+      "image": "/images/78.webp",
       "images": [
-        "https://i.postimg.cc/mr2jLmv5/Werewolf.png",
+        "/images/78.webp",
+        "/api/bloxfruits/item-image/78",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/78"
       ],
       "physicalValue": 930000000,
@@ -2705,45 +2782,14 @@
       "name": "Rose Quartz Diamond",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/02PQqRHR/Rose-Quartz.webp",
+      "image": "/images/61.webp",
       "images": [
-        "https://i.postimg.cc/02PQqRHR/Rose-Quartz.webp",
+        "/images/61.webp",
+        "/api/bloxfruits/item-image/61",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/61"
       ],
       "physicalValue": 180000000,
       "physicalValueFormatted": "180M",
-      "permanentValue": 0,
-      "permanentValueFormatted": "N/A",
-      "physicalDemand": 6,
-      "permanentDemand": 0,
-      "physicalTrend": "Stable",
-      "permanentTrend": "Stable",
-      "beliPrice": 0,
-      "beliPriceFormatted": "0",
-      "robuxPrice": 0,
-      "fruitType": "",
-      "tradeable": true,
-      "bestUsedFor": "",
-      "updatedAt": "2026-11-02T20:41:48.000Z",
-      "position": 0,
-      "previousPhysicalValue": 180000000,
-      "previousPermanentValue": 0,
-      "previousDemand": 6,
-      "previousTrend": "Stable"
-    },
-    {
-      "id": "950b7826-4149-487b-899b-ca01bc8f3185",
-      "itemId": "62",
-      "name": "Emerald Diamond",
-      "category": "Limiteds",
-      "rarity": "Limited",
-      "image": "https://i.postimg.cc/8zCzjdSZ/Emerald.webp",
-      "images": [
-        "https://i.postimg.cc/8zCzjdSZ/Emerald.webp",
-        "https://bloxfruitsvalues.com/api/bloxfruits/item-image/62"
-      ],
-      "physicalValue": 150000000,
-      "physicalValueFormatted": "150M",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
       "physicalDemand": 5,
@@ -2756,11 +2802,44 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-11-02T20:42:14.000Z",
+      "updatedAt": "2026-11-06T14:24:36.000Z",
+      "position": 0,
+      "previousPhysicalValue": 180000000,
+      "previousPermanentValue": 0,
+      "previousDemand": 5,
+      "previousTrend": "Stable"
+    },
+    {
+      "id": "950b7826-4149-487b-899b-ca01bc8f3185",
+      "itemId": "62",
+      "name": "Emerald Diamond",
+      "category": "Limiteds",
+      "rarity": "Limited",
+      "image": "/images/62.webp",
+      "images": [
+        "/images/62.webp",
+        "/api/bloxfruits/item-image/62",
+        "https://bloxfruitsvalues.com/api/bloxfruits/item-image/62"
+      ],
+      "physicalValue": 150000000,
+      "physicalValueFormatted": "150M",
+      "permanentValue": 0,
+      "permanentValueFormatted": "N/A",
+      "physicalDemand": 4,
+      "permanentDemand": 0,
+      "physicalTrend": "Stable",
+      "permanentTrend": "Stable",
+      "beliPrice": 0,
+      "beliPriceFormatted": "0",
+      "robuxPrice": 0,
+      "fruitType": "",
+      "tradeable": true,
+      "bestUsedFor": "",
+      "updatedAt": "2026-11-06T14:25:07.000Z",
       "position": 0,
       "previousPhysicalValue": 150000000,
       "previousPermanentValue": 0,
-      "previousDemand": 5,
+      "previousDemand": 4,
       "previousTrend": "Stable"
     },
     {
@@ -2769,9 +2848,10 @@
       "name": "Topaz Diamond",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/VLgNfG3S/Topaz.webp",
+      "image": "/images/63.webp",
       "images": [
-        "https://i.postimg.cc/VLgNfG3S/Topaz.webp",
+        "/images/63.webp",
+        "/api/bloxfruits/item-image/63",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/63"
       ],
       "physicalValue": 10000000,
@@ -2801,16 +2881,17 @@
       "name": "Ruby Diamond",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/9XGMSFbY/Ruby.webp",
+      "image": "/images/64.webp",
       "images": [
-        "https://i.postimg.cc/9XGMSFbY/Ruby.webp",
+        "/images/64.webp",
+        "/api/bloxfruits/item-image/64",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/64"
       ],
       "physicalValue": 80000000,
       "physicalValueFormatted": "80M",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
-      "physicalDemand": 5,
+      "physicalDemand": 4,
       "permanentDemand": 0,
       "physicalTrend": "Stable",
       "permanentTrend": "Stable",
@@ -2820,11 +2901,11 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-11-02T20:43:14.000Z",
+      "updatedAt": "2026-11-06T14:25:04.000Z",
       "position": 0,
       "previousPhysicalValue": 80000000,
       "previousPermanentValue": 0,
-      "previousDemand": 5,
+      "previousDemand": 4,
       "previousTrend": "Stable"
     },
     {
@@ -2833,9 +2914,10 @@
       "name": "Dragon Token",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/hPYzkcd7/Dragon-Token.png",
+      "image": "/images/45.webp",
       "images": [
-        "https://i.postimg.cc/hPYzkcd7/Dragon-Token.png",
+        "/images/45.webp",
+        "/api/bloxfruits/item-image/45",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/45"
       ],
       "physicalValue": 0,
@@ -2865,9 +2947,10 @@
       "name": "Eclipse",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/65MLTkG9/Eclipse.png",
+      "image": "/images/46.webp",
       "images": [
-        "https://i.postimg.cc/65MLTkG9/Eclipse.png",
+        "/images/46.webp",
+        "/api/bloxfruits/item-image/46",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/46"
       ],
       "physicalValue": 0,
@@ -2897,9 +2980,10 @@
       "name": "Super Spirit Pain",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/Xv7LjsRD/Super-Spirit-Pain.png",
+      "image": "/images/76.webp",
       "images": [
-        "https://i.postimg.cc/Xv7LjsRD/Super-Spirit-Pain.png",
+        "/images/76.webp",
+        "/api/bloxfruits/item-image/76",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/76"
       ],
       "physicalValue": 2340000000,
@@ -2929,16 +3013,17 @@
       "name": "Torment Pain",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/T1qGN3Q0/Torment.png",
+      "image": "/images/65.webp",
       "images": [
-        "https://i.postimg.cc/T1qGN3Q0/Torment.png",
+        "/images/65.webp",
+        "/api/bloxfruits/item-image/65",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/65"
       ],
       "physicalValue": 80000000,
       "physicalValueFormatted": "80M",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
-      "physicalDemand": 6,
+      "physicalDemand": 5,
       "permanentDemand": 0,
       "physicalTrend": "Stable",
       "permanentTrend": "Stable",
@@ -2948,11 +3033,11 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-11-02T20:43:20.000Z",
+      "updatedAt": "2026-11-06T14:24:47.000Z",
       "position": 0,
       "previousPhysicalValue": 80000000,
       "previousPermanentValue": 0,
-      "previousDemand": 6,
+      "previousDemand": 5,
       "previousTrend": "Stable"
     },
     {
@@ -2961,13 +3046,14 @@
       "name": "Sadness Pain",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/C5VS4qCd/Sadness.png",
+      "image": "/images/66.webp",
       "images": [
-        "https://i.postimg.cc/C5VS4qCd/Sadness.png",
+        "/images/66.webp",
+        "/api/bloxfruits/item-image/66",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/66"
       ],
-      "physicalValue": 540000000,
-      "physicalValueFormatted": "540M",
+      "physicalValue": 570000000,
+      "physicalValueFormatted": "570M",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
       "physicalDemand": 7,
@@ -2980,9 +3066,9 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-11-04T20:55:24.000Z",
+      "updatedAt": "2026-11-06T14:23:14.000Z",
       "position": 0,
-      "previousPhysicalValue": 540000000,
+      "previousPhysicalValue": 570000000,
       "previousPermanentValue": 0,
       "previousDemand": 7,
       "previousTrend": "Stable"
@@ -2993,9 +3079,10 @@
       "name": "Frustration Pain",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/26WCvwZP/Frustration.png",
+      "image": "/images/67.webp",
       "images": [
-        "https://i.postimg.cc/26WCvwZP/Frustration.png",
+        "/images/67.webp",
+        "/api/bloxfruits/item-image/67",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/67"
       ],
       "physicalValue": 390000000,
@@ -3025,13 +3112,14 @@
       "name": "Celestial Pain",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/RC7ZvC2r/Celestial-Pain.png",
+      "image": "/images/68.webp",
       "images": [
-        "https://i.postimg.cc/RC7ZvC2r/Celestial-Pain.png",
+        "/images/68.webp",
+        "/api/bloxfruits/item-image/68",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/68"
       ],
-      "physicalValue": 600000000,
-      "physicalValueFormatted": "600M",
+      "physicalValue": 630000000,
+      "physicalValueFormatted": "630M",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
       "physicalDemand": 7,
@@ -3044,9 +3132,9 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-11-04T20:55:17.000Z",
+      "updatedAt": "2026-11-06T14:23:06.000Z",
       "position": 0,
-      "previousPhysicalValue": 600000000,
+      "previousPhysicalValue": 630000000,
       "previousPermanentValue": 0,
       "previousDemand": 7,
       "previousTrend": "Stable"
@@ -3057,16 +3145,17 @@
       "name": "Eagle Requiem",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/7P3ZqPjr/Eagle-Requiem.png",
+      "image": "/images/69.webp",
       "images": [
-        "https://i.postimg.cc/7P3ZqPjr/Eagle-Requiem.png",
+        "/images/69.webp",
+        "/api/bloxfruits/item-image/69",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/69"
       ],
-      "physicalValue": 170000000,
-      "physicalValueFormatted": "170M",
+      "physicalValue": 180000000,
+      "physicalValueFormatted": "180M",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
-      "physicalDemand": 6,
+      "physicalDemand": 5,
       "permanentDemand": 0,
       "physicalTrend": "Stable",
       "permanentTrend": "Stable",
@@ -3076,11 +3165,11 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-11-02T20:42:02.000Z",
+      "updatedAt": "2026-11-06T14:24:25.000Z",
       "position": 0,
-      "previousPhysicalValue": 170000000,
+      "previousPhysicalValue": 180000000,
       "previousPermanentValue": 0,
-      "previousDemand": 6,
+      "previousDemand": 5,
       "previousTrend": "Stable"
     },
     {
@@ -3089,13 +3178,14 @@
       "name": "Eagle Glacier",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/qBsvpBWV/Eagle-Glacier.png",
+      "image": "/images/70.webp",
       "images": [
-        "https://i.postimg.cc/qBsvpBWV/Eagle-Glacier.png",
+        "/images/70.webp",
+        "/api/bloxfruits/item-image/70",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/70"
       ],
-      "physicalValue": 20000000,
-      "physicalValueFormatted": "20M",
+      "physicalValue": 25000000,
+      "physicalValueFormatted": "25M",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
       "physicalDemand": 4,
@@ -3108,9 +3198,9 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-08-25T16:35:43.000Z",
+      "updatedAt": "2026-11-06T14:23:52.000Z",
       "position": 0,
-      "previousPhysicalValue": 20000000,
+      "previousPhysicalValue": 25000000,
       "previousPermanentValue": 0,
       "previousDemand": 4,
       "previousTrend": "Stable"
@@ -3121,16 +3211,17 @@
       "name": "Eagle Matrix",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/446xX4qD/Eagle-Matrix.png",
+      "image": "/images/71.webp",
       "images": [
-        "https://i.postimg.cc/446xX4qD/Eagle-Matrix.png",
+        "/images/71.webp",
+        "/api/bloxfruits/item-image/71",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/71"
       ],
       "physicalValue": 300000000,
       "physicalValueFormatted": "300M",
       "permanentValue": 0,
       "permanentValueFormatted": "N/A",
-      "physicalDemand": 7,
+      "physicalDemand": 6,
       "permanentDemand": 0,
       "physicalTrend": "Stable",
       "permanentTrend": "Stable",
@@ -3140,11 +3231,11 @@
       "fruitType": "",
       "tradeable": true,
       "bestUsedFor": "",
-      "updatedAt": "2026-11-02T20:41:20.000Z",
+      "updatedAt": "2026-11-06T14:24:16.000Z",
       "position": 0,
       "previousPhysicalValue": 300000000,
       "previousPermanentValue": 0,
-      "previousDemand": 7,
+      "previousDemand": 6,
       "previousTrend": "Stable"
     },
     {
@@ -3153,9 +3244,10 @@
       "name": "Celebration Bomb",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/Jh4xrpf6/Celebration-Bomb.png",
+      "image": "/images/77.webp",
       "images": [
-        "https://i.postimg.cc/Jh4xrpf6/Celebration-Bomb.png",
+        "/images/77.webp",
+        "/api/bloxfruits/item-image/77",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/77"
       ],
       "physicalValue": 10000000,
@@ -3185,9 +3277,10 @@
       "name": "Azura Bomb",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/PfW5df9K/Azura-Bomb.png",
+      "image": "/images/72.webp",
       "images": [
-        "https://i.postimg.cc/PfW5df9K/Azura-Bomb.png",
+        "/images/72.webp",
+        "/api/bloxfruits/item-image/72",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/72"
       ],
       "physicalValue": 450000000,
@@ -3217,9 +3310,10 @@
       "name": "Thermite Bomb",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/T2V3T2Bf/Thermite-Bomb.png",
+      "image": "/images/73.webp",
       "images": [
-        "https://i.postimg.cc/T2V3T2Bf/Thermite-Bomb.png",
+        "/images/73.webp",
+        "/api/bloxfruits/item-image/73",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/73"
       ],
       "physicalValue": 390000000,
@@ -3249,9 +3343,10 @@
       "name": "Nuclear Bomb",
       "category": "Limiteds",
       "rarity": "Limited",
-      "image": "https://i.postimg.cc/QNQdjNvs/Nuclear-Bomb.png",
+      "image": "/images/74.webp",
       "images": [
-        "https://i.postimg.cc/QNQdjNvs/Nuclear-Bomb.png",
+        "/images/74.webp",
+        "/api/bloxfruits/item-image/74",
         "https://bloxfruitsvalues.com/api/bloxfruits/item-image/74"
       ],
       "physicalValue": 420000000,
@@ -3277,8 +3372,8 @@
     }
   ],
   "status": {
-    "lastSyncAttempt": "2026-11-06T11:26:20.660Z",
-    "lastSuccessfulSync": "2026-11-06T11:26:21.824Z",
+    "lastSyncAttempt": "2026-11-07T06:30:36.567Z",
+    "lastSuccessfulSync": "2026-11-07T06:30:39.029Z",
     "status": "success",
     "sourceUrl": "https://bloxfruitsvalues.com/values",
     "syncIntervalMinutes": 5,
@@ -3291,5 +3386,166 @@
     "isStale": false,
     "missingCategories": []
   },
-  "changes": []
+  "changes": [
+    {
+      "id": "c355aced-93e5-49fb-9085-6bc8e39e1d87-val-1794031899707",
+      "itemId": "87",
+      "name": "Magnet",
+      "category": "Fruits",
+      "field": "Physical Value",
+      "oldValue": "360M",
+      "newValue": "330M",
+      "timestamp": "2026-11-07T06:11:39.707Z"
+    },
+    {
+      "id": "1bbf6b4c-5d07-4ae9-8354-6475a26aeb6e-val-1794031899708",
+      "itemId": "13",
+      "name": "Venom",
+      "category": "Fruits",
+      "field": "Physical Value",
+      "oldValue": "100M",
+      "newValue": "110M",
+      "timestamp": "2026-11-07T06:11:39.707Z"
+    },
+    {
+      "id": "be0fe09e-febe-4ead-8698-2fead47b068a-val-1794031899708",
+      "itemId": "95",
+      "name": "Hellfire Gas",
+      "category": "Limiteds",
+      "field": "Physical Value",
+      "oldValue": "180M",
+      "newValue": "120M",
+      "timestamp": "2026-11-07T06:11:39.707Z"
+    },
+    {
+      "id": "24d83a72-1cc2-4769-b785-11b59e851f3f-val-1794031899708",
+      "itemId": "84",
+      "name": "Doghouse (Frame Break)",
+      "category": "Limiteds",
+      "field": "Physical Value",
+      "oldValue": "10.9B",
+      "newValue": "11B",
+      "timestamp": "2026-11-07T06:11:39.707Z"
+    },
+    {
+      "id": "e61f3536-52f0-49e8-963d-a523f4191703-val-1794031899708",
+      "itemId": "85",
+      "name": "Rabid Dog Blade",
+      "category": "Limiteds",
+      "field": "Physical Value",
+      "oldValue": "20.7B",
+      "newValue": "21.4B",
+      "timestamp": "2026-11-07T06:11:39.707Z"
+    },
+    {
+      "id": "4b3a017f-1e77-4f44-aa03-c0647d83aa2a-val-1794031899708",
+      "itemId": "86",
+      "name": "Dog Blade",
+      "category": "Limiteds",
+      "field": "Physical Value",
+      "oldValue": "1.7B",
+      "newValue": "1.8B",
+      "timestamp": "2026-11-07T06:11:39.707Z"
+    },
+    {
+      "id": "779bc5cb-aebd-4568-b075-04ffb220adb1-val-1794031899708",
+      "itemId": "79",
+      "name": "Galaxy Empyrean Kitsune",
+      "category": "Limiteds",
+      "field": "Physical Value",
+      "oldValue": "8.2B",
+      "newValue": "8.5B",
+      "timestamp": "2026-11-07T06:11:39.707Z"
+    },
+    {
+      "id": "9432914d-d1f4-4620-b469-8291741f1d65-val-1794031899708",
+      "itemId": "80",
+      "name": "Ember West Dragon",
+      "category": "Limiteds",
+      "field": "Physical Value",
+      "oldValue": "6B",
+      "newValue": "6B",
+      "timestamp": "2026-11-07T06:11:39.707Z"
+    },
+    {
+      "id": "af5eaf33-b80e-4191-b720-ce5926675d46-val-1794031899708",
+      "itemId": "81",
+      "name": "Crimson Kitsune",
+      "category": "Limiteds",
+      "field": "Physical Value",
+      "oldValue": "6.1B",
+      "newValue": "6.1B",
+      "timestamp": "2026-11-07T06:11:39.707Z"
+    },
+    {
+      "id": "c1a320ca-31b0-4bd6-ba0d-c5dbf93948b0-val-1794031899708",
+      "itemId": "59",
+      "name": "Meme-Meme",
+      "category": "Limiteds",
+      "field": "Physical Value",
+      "oldValue": "5.9B",
+      "newValue": "5.8B",
+      "timestamp": "2026-11-07T06:11:39.707Z"
+    },
+    {
+      "id": "a3ae6473-1fb3-4559-b222-c9dc1962cda8-val-1794031899708",
+      "itemId": "43",
+      "name": "Parrot",
+      "category": "Limiteds",
+      "field": "Physical Value",
+      "oldValue": "6.1B",
+      "newValue": "6.1B",
+      "timestamp": "2026-11-07T06:11:39.707Z"
+    },
+    {
+      "id": "53990e11-b0bf-40df-bb61-5bfe90c2846c-val-1794031899708",
+      "itemId": "56",
+      "name": "Purple Lightning",
+      "category": "Limiteds",
+      "field": "Physical Value",
+      "oldValue": "4.3B",
+      "newValue": "4.5B",
+      "timestamp": "2026-11-07T06:11:39.707Z"
+    },
+    {
+      "id": "06998dc2-c522-4343-bc8c-a5714177c971-val-1794031899708",
+      "itemId": "66",
+      "name": "Sadness Pain",
+      "category": "Limiteds",
+      "field": "Physical Value",
+      "oldValue": "540M",
+      "newValue": "570M",
+      "timestamp": "2026-11-07T06:11:39.707Z"
+    },
+    {
+      "id": "6d18998d-7194-4cde-a341-56ec34633f7d-val-1794031899708",
+      "itemId": "68",
+      "name": "Celestial Pain",
+      "category": "Limiteds",
+      "field": "Physical Value",
+      "oldValue": "600M",
+      "newValue": "630M",
+      "timestamp": "2026-11-07T06:11:39.707Z"
+    },
+    {
+      "id": "a507adbb-d8cc-4132-8d1f-5fdaed2ac875-val-1794031899708",
+      "itemId": "69",
+      "name": "Eagle Requiem",
+      "category": "Limiteds",
+      "field": "Physical Value",
+      "oldValue": "170M",
+      "newValue": "180M",
+      "timestamp": "2026-11-07T06:11:39.707Z"
+    },
+    {
+      "id": "f6dca681-768f-449f-87bb-80affc3eb7b4-val-1794031899708",
+      "itemId": "70",
+      "name": "Eagle Glacier",
+      "category": "Limiteds",
+      "field": "Physical Value",
+      "oldValue": "20M",
+      "newValue": "25M",
+      "timestamp": "2026-11-07T06:11:39.707Z"
+    }
+  ]
 }

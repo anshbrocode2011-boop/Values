@@ -59,17 +59,38 @@ interface RawSourceItem {
  */
 function normalizeItem(raw: RawSourceItem, fallbackCategory: ItemCategory): BloxFruitItem {
   const meta = raw.metadata || {};
+  const itemId = raw.itemId || String(raw.position || '');
 
-  // Clean image URLs (the API sometimes returns comma-separated mirror urls)
-  let primaryImage = '';
+  // Extract and build robust image sources
+  const candidateImages: string[] = [];
+
+  // Local static and synced endpoints on our server
+  if (itemId) {
+    candidateImages.push(`/images/${itemId}.webp`);
+    candidateImages.push(`/api/bloxfruits/item-image/${itemId}`);
+    // Remote official source fallback
+    candidateImages.push(`https://bloxfruitsvalues.com/api/bloxfruits/item-image/${itemId}`);
+  }
+
+  // Parse raw image string (might be comma-separated or relative or postimg)
   const rawImage = raw.image || '';
-  const images = rawImage
+  const rawImages = rawImage
     .split(',')
     .map((s) => s.trim())
     .filter(Boolean);
-  if (images.length > 0) {
-    primaryImage = images[0];
+
+  for (const img of rawImages) {
+    if (img.startsWith('http')) {
+      if (!candidateImages.includes(img)) candidateImages.push(img);
+    } else if (img.startsWith('/')) {
+      const fullUrl = `https://bloxfruitsvalues.com${img}`;
+      if (!candidateImages.includes(fullUrl)) candidateImages.push(fullUrl);
+    }
   }
+
+  const primaryImage = candidateImages.length > 0
+    ? candidateImages[0]
+    : (itemId ? `/api/bloxfruits/item-image/${itemId}` : '');
 
   // Category normalization
   let category: ItemCategory = fallbackCategory;
@@ -84,12 +105,12 @@ function normalizeItem(raw: RawSourceItem, fallbackCategory: ItemCategory): Blox
 
   return {
     id: raw.id || `${category.toLowerCase()}-${raw.name.toLowerCase().replace(/\s+/g, '-')}`,
-    itemId: raw.itemId || String(raw.position || ''),
+    itemId,
     name: raw.name ? raw.name.trim() : 'Unknown Item',
     category,
     rarity: meta.tier || raw.rarity || 'Common',
     image: primaryImage,
-    images,
+    images: candidateImages,
     physicalValue: regVal,
     physicalValueFormatted: formatValue(regVal),
     permanentValue: permVal,
@@ -183,7 +204,10 @@ async function scrapeCategoryWithCheerio(category: 'fruits' | 'gamepasses' | 'li
     const title = card.find('h3').text().trim() || card.find('a[aria-label]').attr('aria-label') || '';
     if (!title) return;
 
-    const img = card.find('img').attr('src') || '';
+    let img = card.find('img').attr('src') || '';
+    if (img.startsWith('/')) {
+      img = `https://bloxfruitsvalues.com${img}`;
+    }
     const rarity = card.find('[class*="tinted-text"], [class*="tinted-border"]').first().text().trim() || 'Common';
     const valueText = card.find('[class*="tabular-nums text-foreground"]').first().text().trim();
     const trend = card.find('[class*="text-muted-foreground"]').first().text().trim() || 'Stable';
@@ -196,15 +220,20 @@ async function scrapeCategoryWithCheerio(category: 'fruits' | 'gamepasses' | 'li
 
     const beliText = card.find('dt:contains("Beli Price")').next('dd').text().trim();
     const fruitType = card.find('dt:contains("Fruit type")').next('dd').text().trim();
+    const itemId = String(idx + 1);
 
     scrapedItems.push({
       id: `scraped-${category}-${idx}-${title.toLowerCase().replace(/\s+/g, '-')}`,
-      itemId: String(idx + 1),
+      itemId,
       name: title,
       category: targetCategory,
       rarity,
-      image: img.split(',')[0],
-      images: img ? [img.split(',')[0]] : [],
+      image: `/api/bloxfruits/item-image/${itemId}`,
+      images: [
+        `/api/bloxfruits/item-image/${itemId}`,
+        `https://bloxfruitsvalues.com/api/bloxfruits/item-image/${itemId}`,
+        ...(img ? [img.split(',')[0]] : []),
+      ],
       physicalValue: null,
       physicalValueFormatted: valueText || 'N/A',
       permanentValue: null,

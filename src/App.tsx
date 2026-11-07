@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Settings, ShieldCheck, Clock, Layers } from 'lucide-react';
+import { Settings, ShieldCheck, Clock, Layers, Scale, Gem, ExternalLink, RefreshCw } from 'lucide-react';
 import { BloxFruitItem, SyncStatus, ValueChange, ItemCategory } from './types';
-import { Header } from './components/Header';
-import { HeroShowcase } from './components/HeroShowcase';
-import { CategoryIndicators } from './components/CategoryIndicators';
-import { ItemsTable } from './components/ItemsTable';
+import { Header, AppMode } from './components/Header';
+import { FruitCardGrid } from './components/FruitCardGrid';
+import { TradingCalculator } from './components/TradingCalculator';
 import { AlertBanner } from './components/AlertBanner';
 import { ValueChangesModal } from './components/ValueChangesModal';
 import { SettingsModal } from './components/SettingsModal';
@@ -18,7 +17,6 @@ async function fetchWithRetry(url: string, options?: RequestInit, retries = 3, d
     try {
       const res = await fetch(url, options);
       if (res.ok) return res;
-      // If server returned 5xx, wait and retry
       if (res.status >= 500 && i < retries - 1) {
         await new Promise((resolve) => setTimeout(resolve, delay * (i + 1)));
         continue;
@@ -35,19 +33,24 @@ async function fetchWithRetry(url: string, options?: RequestInit, retries = 3, d
 }
 
 export function App() {
+  const [activeMode, setActiveMode] = useState<AppMode>('values');
   // Pre-seed with verified data so UI renders instantly without waiting
   const [items, setItems] = useState<BloxFruitItem[]>((initialData?.items as BloxFruitItem[]) || []);
   const [status, setStatus] = useState<SyncStatus | null>((initialData?.status as SyncStatus) || null);
   const [changes, setChanges] = useState<ValueChange[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<ItemCategory | 'all'>('all');
-  const [tableSearch, setTableSearch] = useState<string>('');
+  const [prefilledTradeItem, setPrefilledTradeItem] = useState<{
+    item: BloxFruitItem;
+    target: 'you' | 'them';
+  } | null>(null);
+
   const [isSyncing, setIsSyncing] = useState<boolean>(false);
   const [syncSuccessMessage, setSyncSuccessMessage] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isChangesModalOpen, setIsChangesModalOpen] = useState<boolean>(false);
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState<boolean>(false);
 
-  // Fetch items and sync status from backend with resilient retry
+  // Fetch items and sync status from backend
   const loadData = useCallback(async (isSilent = false) => {
     try {
       // 1. Fetch values
@@ -77,7 +80,6 @@ export function App() {
       }
     } catch (err: any) {
       console.warn('Background sync warning:', err.message);
-      // Only set visible error banner if we have NO items loaded at all
       if (items.length === 0) {
         setErrorMessage(
           'Connecting to backend live values database... Click "Sync Settings -> Update Latest Values" if needed.'
@@ -95,7 +97,20 @@ export function App() {
     return () => clearInterval(interval);
   }, [loadData]);
 
-  // Handle manual sync refresh / update latest values
+  // Pre-warm browser image cache for rapid instant display
+  useEffect(() => {
+    if (items.length > 0) {
+      const prefetchList = items.slice(0, 32);
+      prefetchList.forEach((item) => {
+        if (item.itemId) {
+          const img = new Image();
+          img.src = `/images/${item.itemId}.webp`;
+        }
+      });
+    }
+  }, [items]);
+
+  // Handle manual sync refresh
   const handleRefresh = async () => {
     setIsSyncing(true);
     setErrorMessage(null);
@@ -118,14 +133,11 @@ export function App() {
     }
   };
 
-  // Scroll to and filter item in database table
-  const handleSelectItemFromHero = (item: BloxFruitItem) => {
-    setSelectedCategory('all');
-    setTableSearch(item.name);
-    const el = document.getElementById('database-table');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
+  // Add item directly to calculator from values list
+  const handleAddToCalculator = (item: BloxFruitItem, side: 'you' | 'them') => {
+    setPrefilledTradeItem({ item, target: side });
+    setActiveMode('calculator');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const fruitsCount = items.filter((i) => i.category === 'Fruits').length;
@@ -133,9 +145,11 @@ export function App() {
   const limitedsCount = items.filter((i) => i.category === 'Limiteds').length;
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 flex flex-col font-sans">
-      {/* Top Header */}
+    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans">
+      {/* Top Header with Mode Switcher */}
       <Header
+        currentMode={activeMode}
+        onModeChange={setActiveMode}
         lastSync={status?.lastSuccessfulSync || null}
         isSyncing={isSyncing}
         onRefresh={handleRefresh}
@@ -145,8 +159,8 @@ export function App() {
       />
 
       {/* Main Container */}
-      <main className="flex-1 max-w-5xl mx-auto w-full px-4 sm:px-6 py-6 sm:py-8">
-        {/* Error / Warning Alert */}
+      <main className="flex-1 max-w-6xl mx-auto w-full px-3.5 sm:px-6 py-5 sm:py-7">
+        {/* Alerts & Notifications */}
         {errorMessage && (
           <AlertBanner
             type="error"
@@ -156,7 +170,6 @@ export function App() {
           />
         )}
 
-        {/* Sync Success Feedback */}
         {syncSuccessMessage && (
           <AlertBanner
             type="success"
@@ -166,123 +179,93 @@ export function App() {
           />
         )}
 
-        {/* Stale Data Warning */}
-        {status?.isStale && (
-          <AlertBanner
-            type="warning"
-            title="Data May Be Stale"
-            message={`Last successful sync was ${formatRelativeTime(
-              status.lastSuccessfulSync
-            )}. Use "Settings -> Update Latest Values" to trigger an immediate update.`}
-          />
-        )}
-
-        {/* Missing Categories Alert */}
-        {status?.missingCategories && status.missingCategories.length > 0 && (
-          <AlertBanner
-            type="warning"
-            title="Incomplete Categories Detected"
-            message={`The source website did not respond for the following categories: ${status.missingCategories.join(
-              ', '
-            )}. Available verified items are displayed below.`}
-          />
-        )}
-
-        {/* Top Header Info Bar */}
-        <div className="py-2 mb-4">
-          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 border-b border-slate-100 pb-4">
+        {/* Top Hero Option Banner (Option between Calculator or Values) */}
+        <div className="bg-white rounded-2xl border border-slate-200/90 p-4 sm:p-5 shadow-2xs mb-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
             <div>
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Complete Values Report
+              <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+                {activeMode === 'values' ? 'Blox Fruits Live Values' : 'Blox Fruits Trading Calculator'}
               </h1>
-              <p className="mt-1 text-sm text-slate-600 max-w-xl leading-relaxed">
-                Live Blox Fruits trading values database and real-time market valuations.
+              <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
+                {activeMode === 'values'
+                  ? 'Real-time trading valuations, demand ratings, and market trends for all fruits & items.'
+                  : 'Calculate fair trades, evaluate Win/Fair/Lose outcomes, and check in-game 40% Beli limits.'}
               </p>
             </div>
 
-            {/* Sync Metadata & Settings Trigger */}
-            <div className="text-xs text-slate-500 sm:text-right font-normal space-y-1 mt-2 sm:mt-0">
-              <div className="flex items-center gap-1 sm:justify-end">
-                <Clock className="w-3.5 h-3.5 text-slate-400" />
-                <span>Last Synced: </span>
-                <span className="font-semibold text-slate-800">
-                  {status?.lastSuccessfulSync ? formatRelativeTime(status.lastSuccessfulSync) : 'Synchronizing...'}
-                </span>
-              </div>
-              <p className="text-[11px] text-slate-400">
-                {status?.lastSuccessfulSync ? formatDateTime(status.lastSuccessfulSync) : 'Auto-updates every 5 mins'}
-              </p>
-            </div>
-          </div>
-
-          {/* Key Metric Bar */}
-          <div className="flex flex-wrap items-center gap-y-2 gap-x-4 text-xs text-slate-500 mt-3">
-            <div className="flex items-center gap-1.5 font-medium text-slate-800">
-              <Layers className="w-4 h-4 text-blue-600" />
-              <span>Total items detected:</span>
-              <span className="font-mono font-bold text-slate-900 text-sm">
-                {items.length}
-              </span>
-            </div>
-            <span aria-hidden="true" className="text-slate-300">·</span>
-            <span>Fruits: <strong className="text-slate-800 font-mono">{fruitsCount}</strong></span>
-            <span aria-hidden="true" className="text-slate-300">·</span>
-            <span>Gamepasses: <strong className="text-slate-800 font-mono">{gamepassesCount}</strong></span>
-            <span aria-hidden="true" className="text-slate-300">·</span>
-            <span>Limiteds: <strong className="text-slate-800 font-mono">{limitedsCount}</strong></span>
-          </div>
-        </div>
-
-        {/* Interactive Blox Fruits Hero Showcase */}
-        <HeroShowcase
-          items={items}
-          onSelectItem={handleSelectItemFromHero}
-        />
-
-        {/* Three Category Indicators */}
-        <CategoryIndicators
-          fruitsCount={fruitsCount}
-          gamepassesCount={gamepassesCount}
-          limitedsCount={limitedsCount}
-          selectedCategory={selectedCategory}
-          onSelectCategory={setSelectedCategory}
-        />
-
-        {/* Quick Sync & Settings Status Bar */}
-        <div className="my-5 p-4 rounded-xl bg-slate-50/80 border border-slate-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-slate-600">
-          <div className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span>
-              Real-time values synchronized directly from{' '}
-              <a
-                href="https://bloxfruitsvalues.com/values"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-blue-600 hover:underline"
+            {/* Mode Option Buttons */}
+            <div className="flex items-center gap-2 p-1 bg-slate-100 rounded-xl self-start sm:self-auto border border-slate-200/70">
+              <button
+                onClick={() => setActiveMode('values')}
+                type="button"
+                className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                  activeMode === 'values'
+                    ? 'bg-blue-600 text-white shadow-xs'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'
+                }`}
               >
-                bloxfruitsvalues.com
-              </a>
-            </span>
+                <Gem className="w-3.5 h-3.5" />
+                <span>Values List</span>
+              </button>
+
+              <button
+                onClick={() => setActiveMode('calculator')}
+                type="button"
+                className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                  activeMode === 'calculator'
+                    ? 'bg-blue-600 text-white shadow-xs'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'
+                }`}
+              >
+                <Scale className="w-3.5 h-3.5" />
+                <span>Trade Calculator</span>
+              </button>
+            </div>
           </div>
 
-          <button
-            onClick={() => setIsSettingsModalOpen(true)}
-            type="button"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 font-medium transition-colors shadow-2xs cursor-pointer"
-          >
-            <Settings className="w-3.5 h-3.5 text-slate-500" />
-            <span>Sync Settings</span>
-          </button>
+          {/* Status Metrics Bar */}
+          <div className="mt-3 flex flex-wrap items-center justify-between gap-y-2 gap-x-4 text-xs text-slate-500">
+            <div className="flex items-center gap-3">
+              <span>Total: <strong className="text-slate-800 font-mono">{items.length}</strong></span>
+              <span aria-hidden="true" className="text-slate-300">·</span>
+              <span>Fruits: <strong className="text-slate-800 font-mono">{fruitsCount}</strong></span>
+              <span aria-hidden="true" className="text-slate-300">·</span>
+              <span>Gamepasses: <strong className="text-slate-800 font-mono">{gamepassesCount}</strong></span>
+              <span aria-hidden="true" className="text-slate-300">·</span>
+              <span>Limiteds: <strong className="text-slate-800 font-mono">{limitedsCount}</strong></span>
+            </div>
+
+            <div className="flex items-center gap-1.5 text-[11px] text-slate-400">
+              <Clock className="w-3.5 h-3.5 text-slate-400" />
+              <span>Last Synced: </span>
+              <strong className="text-slate-700 font-medium">
+                {status?.lastSuccessfulSync ? formatRelativeTime(status.lastSuccessfulSync) : 'Live'}
+              </strong>
+            </div>
+          </div>
         </div>
 
-        {/* Interactive Items Table Explorer */}
-        <ItemsTable
-          items={items}
-          selectedCategory={selectedCategory}
-          onCategoryChange={setSelectedCategory}
-          externalSearch={tableSearch}
-          onClearExternalSearch={() => setTableSearch('')}
-        />
+        {/* View Content: Either Values Feed (One by One) or Trading Calculator */}
+        {activeMode === 'values' ? (
+          <FruitCardGrid
+            items={items}
+            selectedCategory={selectedCategory}
+            onCategoryChange={setSelectedCategory}
+            onAddToCalculator={handleAddToCalculator}
+          />
+        ) : (
+          <TradingCalculator
+            items={items}
+            prefilledItem={prefilledTradeItem}
+            onClearPrefilled={() => setPrefilledTradeItem(null)}
+            onOfferFullWarning={(side) => {
+              setErrorMessage(
+                `${side === 'you' ? 'Your' : 'Their'} trade offer is full (Max 4 items allowed per trade). Remove an item to add another.`
+              );
+              setTimeout(() => setErrorMessage(null), 4000);
+            }}
+          />
+        )}
       </main>
 
       {/* Value Changes Modal */}
@@ -292,7 +275,7 @@ export function App() {
         changes={changes}
       />
 
-      {/* Settings Modal (Containing "Update Latest Values" button) */}
+      {/* Settings Modal */}
       <SettingsModal
         isOpen={isSettingsModalOpen}
         onClose={() => setIsSettingsModalOpen(false)}
@@ -302,19 +285,22 @@ export function App() {
       />
 
       {/* Minimal Footer */}
-      <footer className="border-t border-slate-200/80 bg-slate-50/50 py-6 text-center text-xs text-slate-500 mt-12">
-        <div className="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <footer className="border-t border-slate-200/90 bg-white py-6 text-center text-xs text-slate-500 mt-12">
+        <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p>
-            Blox Fruits Values Report · Real-time market valuations
+            Blox Fruits Values &amp; Trading Calculator · Real-time market valuations &amp; W/F/L calculations
           </p>
-          <a
-            href="https://bloxfruitsvalues.com/values"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:underline font-medium"
-          >
-            Source: bloxfruitsvalues.com/values
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href="https://bloxfruitsvalues.com/values"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline font-medium inline-flex items-center gap-1"
+            >
+              <span>Source Database</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
         </div>
       </footer>
     </div>
