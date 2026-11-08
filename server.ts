@@ -272,6 +272,11 @@ async function startServer() {
       })
     );
 
+    // Guard: Unmatched API routes return 404 JSON instead of falling through to HTML
+    app.all('/api/*', (_req: Request, res: Response) => {
+      res.status(404).json({ success: false, error: 'API endpoint not found' });
+    });
+
     // SPA fallback: Serve index.html without caching so users immediately see updates
     app.get('*', (_req: Request, res: Response) => {
       res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
