@@ -193,6 +193,11 @@ async function startServer() {
     res.status(200).json({ status: 'ok', uptime: process.uptime(), timestamp: new Date().toISOString() });
   });
 
+  // Explicit 404 handler for unmatched API routes to prevent fallback to SPA index.html in both dev and prod
+  app.all('/api/*', (_req: Request, res: Response) => {
+    res.status(404).json({ success: false, error: 'API endpoint not found' });
+  });
+
   // Start background periodic scraping (every 5 minutes)
   db.startAutoSync();
 
@@ -271,11 +276,6 @@ async function startServer() {
         },
       })
     );
-
-    // Guard: Unmatched API routes return 404 JSON instead of falling through to HTML
-    app.all('/api/*', (_req: Request, res: Response) => {
-      res.status(404).json({ success: false, error: 'API endpoint not found' });
-    });
 
     // SPA fallback: Serve index.html without caching so users immediately see updates
     app.get('*', (_req: Request, res: Response) => {
