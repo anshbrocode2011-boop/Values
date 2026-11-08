@@ -246,8 +246,35 @@ async function startServer() {
       }
     }
     console.log(`[Server] Serving production static assets from: ${distPath}`);
-    app.use(express.static(distPath, { maxAge: '1h', etag: true }));
+
+    // Immutable long-term caching for hashed client assets (JS/CSS)
+    const assetsDir = path.join(distPath, 'assets');
+    if (fs.existsSync(assetsDir)) {
+      app.use(
+        '/assets',
+        express.static(assetsDir, {
+          maxAge: '1y',
+          immutable: true,
+        })
+      );
+    }
+
+    // General static files with 1h cache and conditional ETag
+    app.use(
+      express.static(distPath, {
+        maxAge: '1h',
+        etag: true,
+        setHeaders: (res, filePath) => {
+          if (filePath.endsWith('.html')) {
+            res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+          }
+        },
+      })
+    );
+
+    // SPA fallback: Serve index.html without caching so users immediately see updates
     app.get('*', (_req: Request, res: Response) => {
+      res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
       res.sendFile(path.join(distPath, 'index.html'));
     });
   }
