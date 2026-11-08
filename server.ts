@@ -10,9 +10,10 @@ const __dirname = path.dirname(__filename);
 
 async function startServer() {
   const app = express();
-  // Compatible with Render.com (which assigns PORT dynamically via process.env.PORT)
-  // and AI Studio dev environment (defaults to port 3000).
-  const PORT = Number(process.env.PORT) || 3000;
+  const isProduction = process.env.NODE_ENV === 'production';
+  // AI Studio development requires port 3000 for preview.
+  // In production (Render.com), use the dynamically allocated process.env.PORT.
+  const PORT = isProduction ? (Number(process.env.PORT) || 3000) : 3000;
 
   // CORS Middleware for iframe proxy and external client requests
   app.use((req: Request, res: Response, next: NextFunction) => {
@@ -227,11 +228,10 @@ async function startServer() {
   }
 
   // 2. Vite / Static Frontend Integration
-  const isProduction = process.env.NODE_ENV === 'production';
   if (!isProduction) {
     const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
-      server: { middlewareMode: true },
+      server: { middlewareMode: true, hmr: false },
       appType: 'spa',
     });
     app.use(vite.middlewares);
