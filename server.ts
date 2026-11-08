@@ -230,10 +230,22 @@ async function startServer() {
     });
     app.use(vite.middlewares);
   } else {
-    const distPath = path.resolve(__dirname, 'dist');
+    const possibleDistPaths = [
+      path.resolve(process.cwd(), 'dist'),
+      path.resolve(__dirname, 'dist'),
+      __dirname,
+      path.resolve(__dirname, '..', 'dist'),
+    ];
+    let distPath = path.resolve(process.cwd(), 'dist');
+    for (const p of possibleDistPaths) {
+      if (fs.existsSync(path.join(p, 'index.html'))) {
+        distPath = p;
+        break;
+      }
+    }
     app.use(express.static(distPath));
     app.get('*', (_req: Request, res: Response) => {
-      res.sendFile(path.resolve(distPath, 'index.html'));
+      res.sendFile(path.join(distPath, 'index.html'));
     });
   }
 

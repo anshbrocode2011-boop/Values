@@ -62,7 +62,7 @@ class BloxFruitsDatabase {
       if (fs.existsSync(DB_FILE)) {
         const raw = fs.readFileSync(DB_FILE, 'utf8');
         const data: DatabaseSchema = JSON.parse(raw);
-        if (data && Array.isArray(data.items)) {
+        if (data && Array.isArray(data.items) && data.items.length > 0) {
           this.items = data.items;
           this.changes = Array.isArray(data.changes) ? data.changes : [];
           if (data.status) {
@@ -72,6 +72,31 @@ class BloxFruitsDatabase {
             };
           }
           console.log(`[DB] Successfully restored ${this.items.length} items from persistent disk.`);
+          return;
+        }
+      }
+
+      // Fallback: If DB_FILE does not exist or was empty, restore from pre-seeded verified initial data
+      const seedCandidates = [
+        path.resolve(process.cwd(), 'src/data/initial_values.json'),
+        path.resolve(__dirname, '../../src/data/initial_values.json'),
+        path.resolve(__dirname, '../data/initial_values.json'),
+        path.resolve(__dirname, 'initial_values.json'),
+      ];
+
+      for (const candidate of seedCandidates) {
+        if (fs.existsSync(candidate)) {
+          const raw = fs.readFileSync(candidate, 'utf8');
+          const data = JSON.parse(raw);
+          if (data && Array.isArray(data.items) && data.items.length > 0) {
+            this.items = data.items;
+            if (data.status) {
+              this.status = { ...data.status, status: 'idle' };
+            }
+            console.log(`[DB] Pre-seeded ${this.items.length} items from bundled initial data.`);
+            this.saveToDisk();
+            return;
+          }
         }
       }
     } catch (err: any) {
