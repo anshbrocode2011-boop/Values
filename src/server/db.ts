@@ -78,10 +78,12 @@ class BloxFruitsDatabase {
 
       // Fallback: If DB_FILE does not exist or was empty, restore from pre-seeded verified initial data
       const seedCandidates = [
-        path.resolve(process.cwd(), 'src/data/initial_values.json'),
-        path.resolve(__dirname, '../../src/data/initial_values.json'),
-        path.resolve(__dirname, '../data/initial_values.json'),
+        path.resolve(process.cwd(), 'src', 'data', 'initial_values.json'),
+        path.resolve(process.cwd(), 'dist', 'initial_values.json'),
         path.resolve(__dirname, 'initial_values.json'),
+        path.resolve(__dirname, 'data', 'initial_values.json'),
+        path.resolve(__dirname, '..', 'data', 'initial_values.json'),
+        path.resolve(__dirname, '..', '..', 'src', 'data', 'initial_values.json'),
       ];
 
       for (const candidate of seedCandidates) {
@@ -93,7 +95,7 @@ class BloxFruitsDatabase {
             if (data.status) {
               this.status = { ...data.status, status: 'idle' };
             }
-            console.log(`[DB] Pre-seeded ${this.items.length} items from bundled initial data.`);
+            console.log(`[DB] Pre-seeded ${this.items.length} items from bundled initial data: ${candidate}`);
             this.saveToDisk();
             return;
           }

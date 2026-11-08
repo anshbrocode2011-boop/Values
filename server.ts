@@ -196,7 +196,7 @@ async function startServer() {
   // Start background periodic scraping (every 5 minutes)
   db.startAutoSync();
 
-  // Static image route (works seamlessly in both local dev and Render production)
+  // Static image route (dynamically resolves across dev and production locations)
   const candidateImageDirs = [
     path.resolve(process.cwd(), 'dist', 'images'),
     path.resolve(__dirname, 'dist', 'images'),
@@ -204,6 +204,7 @@ async function startServer() {
     path.resolve(__dirname, 'public', 'images'),
     path.resolve(process.cwd(), 'data', 'images'),
     path.resolve(__dirname, 'data', 'images'),
+    path.resolve(__dirname, 'images'),
   ];
 
   for (const dir of candidateImageDirs) {
@@ -230,6 +231,7 @@ async function startServer() {
     });
     app.use(vite.middlewares);
   } else {
+    // Dynamically resolve production distribution directory
     const possibleDistPaths = [
       path.resolve(process.cwd(), 'dist'),
       path.resolve(__dirname, 'dist'),
@@ -243,7 +245,8 @@ async function startServer() {
         break;
       }
     }
-    app.use(express.static(distPath));
+    console.log(`[Server] Serving production static assets from: ${distPath}`);
+    app.use(express.static(distPath, { maxAge: '1h', etag: true }));
     app.get('*', (_req: Request, res: Response) => {
       res.sendFile(path.join(distPath, 'index.html'));
     });
