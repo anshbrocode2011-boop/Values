@@ -24,7 +24,7 @@ This application is 100% pre-configured and production-ready for **Render.com We
    - **Branch**: `main`
    - **Build Command**:
      ```bash
-     npm install && npm run build
+     npm install --legacy-peer-deps && npm run build
      ```
    - **Start Command**:
      ```bash
