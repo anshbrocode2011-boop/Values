@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",
+    "prestart": "npm run build",
     "start": "node dist/server.js",
     "build:client": "vite build",
     "build:server": "esbuild server.ts --platform=node --packages=external --bundle --format=esm --outfile=dist/server.js",
